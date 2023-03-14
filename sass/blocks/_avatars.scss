@@ -1,0 +1,9 @@
+.avatars{
+    margin-bottom: 80px;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+    }
+}

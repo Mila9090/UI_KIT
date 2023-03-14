@@ -1,0 +1,70 @@
+.colors {
+    margin-bottom: 100px;
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+    }
+    &__item {
+        border-radius: 50px;
+        box-shadow: 0px 16px 56px rgba(44, 39, 56, 0.08);
+        color: #fff;
+    }
+    &__title {
+        font-size: 20px;
+        line-height: 28px;
+        color: rgba(255, 255, 255, .56);
+    }
+    &__color {
+        font-size: 34px;
+        line-height: 44px;
+    }
+    &__black {
+        color: $primary-color;
+        .colors__title {
+            color: $primary-color;
+            opacity: 0.56;
+        }
+    }
+    &__accent{
+        @include box;
+        background-color: #0880AE;
+    }
+    &__warning{
+        @include box;
+        background-color: #F2AC57;
+    }
+    &__success{
+        @include box;
+        background-color: #14A38B;
+    }
+    &__error{
+        @include box;
+        background-color: #FF7171;
+    }
+    &__primary{
+        @include box;
+        background-color: #2C2738;
+    }
+    &__secondary{
+        @include box;
+        background-color: #756F86;
+    }
+    &__muted{
+        @include box;
+        background-color: #7C9CBF;
+    }
+    &__bright{
+        @include box;
+        background-color: #fff;
+    }
+    &__shade{
+        @include box;
+        background-color: #DBE2EA;
+    }
+    &__tint{
+        @include box;
+        background-color: $back-color;
+    }
+}

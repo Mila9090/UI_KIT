@@ -1,0 +1,85 @@
+.select2-selection__arrow {
+    display: none;
+}
+.select2-container .select2-selection--single{
+    width: inherit;
+    height: auto;
+    border: 1px solid #dbe2ea;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.select2-dropdown.form__drop.select2-dropdown--below{
+    @include borderTop;
+    border: 1px solid #dbe2ea;
+
+}
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default .select2-results__option--highlighted[aria-selected]:last-child {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.select2-container--default .select2-results__option--selected:last-child {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding: 0;
+    @include font ($primary-color);
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: #EBF4F8;
+    @include font (#756F86);
+    line-height: 1.5;
+}
+.select2-container--default .select2-results__option--highlighted:active{
+    background-color: #fff;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]:first-child{
+    @include borderTop;
+}
+
+.select2-results__options .select2-results__option {
+    padding-left: 15px;
+}
+
+.form{
+    &__select{
+        &-box{
+            width: 100%;
+            height: 58px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .select2-selection {
+        appearance: none;
+        @include iconOnBox('./../icons/second_page/select.svg');
+    }
+    select:disabled~.select2>.selection>.select2-selection{
+        background-image: url('./../icons/second_page/select-disable.svg');
+        background-color: #EBF4F8;
+    }
+    &__select1, &__select2, &__select3  {
+        width: 99%;
+        height: 52px;
+        padding: 16px 57px 15px 16px;
+        border: 1px solid #DBE2EA;
+        box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+        border-radius: 6px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: $primary-color;
+        &:hover, &:focus, &:active{
+            outline: none;
+        }
+    }
+}
+
+.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus.select2-container--open, .select2.select2-container.select2-container--default.select2-container--focus.select2-container--above.select2-container--open{
+    width: 99%;
+    border-radius: 8px;
+    box-sizing: content-box;
+    border: 2px solid #0880AE;
+}

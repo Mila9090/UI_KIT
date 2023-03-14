@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    </style>
+    <div class="container">
+        <div class="header">
+            <ul class="header__list">
+                <li><a class="header__link" href="./index.html">Первая страница</a></li>
+                <li><a class="header__link" href="./second.html">Вторая страница</a></li>
+                <li><a class="header__link" href="./three.html">Третья страница </a></li>
+                <li><a class="header__link" href="./fourth.html">Четвертая страница</a></li>
+            </ul>
+        </div>
+        <section class="form">
+            <div class="point">04. <span>Form</span></div>
+            <div class="form__items">
+                <div class="form__row">
+                    <div class="form__item">
+                        <label for="input1">Label</label>
+                        <input type="text" id="input1" placeholder="Placeholder">
+                        <div class="form__val">Validation error message</div>
+                    </div>
+                    <div class="form__item">
+                        <label for="input2">Label</label>
+                        <input type="text" id="input2" value="Value">
+                        <div class="form__val form__red">Validation success message</div>
+                    </div>
+                </div>
+
+
+                <div class="form__row">
+                    <div class="form__item">
+                        <label for="input3">Label</label>
+                        <input type="text" class="form__input-active" id="input3" value="Value">
+                        <div class="form__val">Validation error message</div>
+                    </div>
+                    <div class="form__item">
+                        <label for="input4">Label</label>
+                        <input type="text" id="input4" value="Value">
+                        <div class="form__val">Validation error message</div>
+                    </div>
+                </div>
+
+
+                <div class="form__row">
+                    <div class="form__item">
+                            <label for="input5">Label</label>
+                            <input type="search" class="form__input-active" id="input5" placeholder="Placeholder" value="Value">
+                        <div class="form__val form__red">Validation error message</div>
+                    </div>
+                    <div class="form__item">
+                            <label for="input6">Label</label>
+                            <input type="search" id="input6" placeholder="Placeholder" value="Value" >
+                        <div class="form__val">Validation error message</div>
+                    </div>
+                    <div class="form__item">
+                            <label for="input7">Label</label>
+                            <input type="search" class="form__border" id="input7" placeholder="Placeholder">
+                        <div class="form__val form__red">Validation error message</div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="form__row">
+                    <div class="form__item">
+                        <label for="input8">Label</label>
+                        <div class="form__select-box">
+                            <select class="form__select1" name="items"  value="Value">
+                                <option></option>
+                                <option value="1">Item</option>
+                                <option value="2">Item</option>
+                                <option value="3">Item</option>
+                                <option value="4">Item</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="form__item">
+                        <label for="input9">Label</label>
+                        <div class="form__select-box">
+                            <select class="form__select2" name="items"  value="Value">
+                                <option></option>
+                                <option value="1">Item</option>
+                                <option value="2">Item</option>
+                                <option value="3">Item</option>
+                                <option value="4">Item</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+
+                <div class="form__row">
+                    <div class="form__item">
+                        <label for="input10">Label</label>
+                        <div class="form__select-box">
+                            <select class="form__select3" name="items"  value="Value" disabled>
+                                <option></option>
+                                <option value="1">Item</option>
+                                <option value="2">Item</option>
+                                <option value="3">Item</option>
+                                <option value="4">Item</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="form__row form__textarea">
+                    <div class="form__item">
+                        <label for="input11">Label</label>
+                        <textarea name="text" id="input11" placeholder="Placeholder"></textarea>
+                        <div class="form__val form__red">Validation error message</div>
+                    </div>
+                    <div class="form__item">
+                        <label for="input12">Label</label>
+                        <textarea name="text" id="input12" placeholder="Placeholder">Value</textarea>
+                        <div class="form__val form__red">Validation error message</div>
+                    </div>
+                </div>
+
+
+                <div class="form__row form__textarea">
+                    <div class="form__item">
+                        <label for="input13">Label</label>
+                        <textarea name="text" id="input13" placeholder="Placeholder">Value</textarea>
+                        <div class="form__val form__red">Validation error message</div>
+                    </div>
+                    <div class="form__item">
+                        <label for="input14">Label</label>
+                        <textarea name="text" id="input14" placeholder="Placeholder" disabled>Value</textarea>
+                        <div class="form__val form__red">Validation error message</div>
+                    </div>
+                </div>
+
+
+                <div class="form__counts">
+                    <div class="form__item form__count">
+                        <button class="form__minus"><div></div></button>
+                        <div class="form__value">01</div>
+                        <button class="form__plus"><div class="form__horizontal"></div><div class="form__vertical"></div></button>
+                    </div>
+
+                    <div class="form__item form__count">
+                        <button disabled class="form__minus"><div></div></button>
+                        <div class="form__value">01</div>
+                        <button disabled class="form__plus"><div class="form__horizontal"></div><div class="form__vertical"></div></button>
+                    </div>
+                </div>
+
+
+
+                <div class="form__checkboxes">
+                    <div class="form__item form__checkbox">
+                        <div class="form__check">
+                            <input type="checkbox" class="custom-checkbox" id="checkbox">
+                            <label for="checkbox">Label</label>
+                        </div>
+                        <div class="form__check">
+                            <input type="checkbox" id="checkbox-dis" class="custom-checkbox checkbox-disable" disabled>
+                            <label for="checkbox-dis">Label</label>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form__item form__checkbox">
+                        <div class="form__check">
+                            <input type="checkbox"  class="custom-checkbox" id="check" checked>
+                            <label for="check">Label</label>
+                        </div>
+                        <div class="form__check">
+                            <input type="checkbox" id="check-dis" class="custom-checkbox checkbox-disable" checked disabled>
+                            <label for="check-dis">Label</label>
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="form__item form__checkbox">
+                        <div class="form__check">
+                            <input type="checkbox"  class="custom-checkbox checkbox-minus" id="minus" checked>
+                            <label for="minus">Label</label>
+                        </div>
+                        <div class="form__check">
+                            <input type="checkbox" id="minus-dis" class="custom-checkbox checkbox-minus minus-disable" checked disabled>
+                            <label for="minus-dis">Label</label>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                <div class="form-radio">
+                    <div class="form-radio__item">
+                        <div class="form-radio__column">
+                            <input type="radio" id="radio-one" class="custom-radio" name="radio">
+                            <label for="radio-one">Label</label>
+                        </div>
+                        <div class="form-radio__column">
+                            <input type="radio" id="radio-one-dis" class="custom-radio" name="radio-dis" disabled>
+                            <label for="radio-one-dis">Label</label>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-radio__item">
+                        <div class="form-radio__column">
+                            <input type="radio" id="radio-two" class="custom-radio" checked name="radio">
+                            <label for="radio-two">Label</label>
+                        </div>
+                        <div class="form-radio__column">
+                            <input type="radio" id="radio-two-dis" class="custom-radio" name="radio-dis" checked disabled>
+                            <label for="radio-two-dis">Label</label>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                <div class="form-btn">
+                    <div class="form-btn__item">
+                        <label class="form__switch">
+                            <input type="checkbox" class="form__switch-input">
+                            <span class="form__slider form__slider-round"></span>
+                            Label
+                        </label>
+
+                        <label class="form__switch">
+                            <input type="checkbox" class="form__switch-input" disabled>
+                            <span class="form__slider form__slider-round"></span>
+                            Label
+                        </label>
+                        
+                        
+                    </div>
+
+                    <div class="form-btn__item">
+                        <label class="form__switch">
+                            <input type="checkbox" class="form__switch-input" checked>
+                            <span class="form__slider form__slider-round"></span>
+                            Label
+                        </label>
+
+                        <label class="form__switch">
+                            <input  type="checkbox" class="form__switch-input" checked disabled>
+                            <span class="form__slider form__slider-round"></span>
+                            Label
+                        </label>
+                        
+                    </div>
+                    
+                </div>
+
+
+                <div class="form__ranges">
+                    <div class="form__range"></div>
+                    <div class="form__range disable"></div>
+                </div>
+
+
+
+                <div class="form-close">
+                    <div class="form-close__items">
+                        <div class="form-close__item">
+                            <div class="form-close__box form-close__white">
+                                <div class="form-close__text">Label</div>
+                                <div class="form-close__sign"><img src="./icons/second_page/cross.svg" alt="Cross"></div>
+                            </div>
+                        </div>
+                        <div class="form-close__item">
+                            <div class="form-close__box form-close__black">
+                                <div class="form-close__text">Label</div>
+                                <div class="form-close__sign"><img src="./icons/second_page/cross-white.svg" alt="Cross"></div>
+                            </div>
+                        </div>
+                        <div class="form-close__item">
+                            <div class="form-close__box form-close__blue">
+                                <div class="form-close__text">Label</div>
+                                <div class="form-close__sign"><img src="./icons/second_page/cross-white.svg" alt="Cross"></div>
+                            </div>
+                        </div>
+                        <div class="form-close__item">
+                            <div class="form-close__box form-close__yellow">
+                                <div class="form-close__text">Label</div>
+                                <div class="form-close__sign"><img src="./icons/second_page/cross-white.svg" alt="Cross"></div>
+                            </div>
+                        </div>
+                        <div class="form-close__item">
+                            <div class="form-close__box form-close__green">
+                                <div class="form-close__text">Label</div>
+                                <div class="form-close__sign"><img src="./icons/second_page/cross-white.svg" alt="Cross"></div>
+                            </div>
+                        </div>
+                        <div class="form-close__item">
+                            <div class="form-close__box form-close__pink">
+                                <div class="form-close__text">Label</div>
+                                <div class="form-close__sign"><img src="./icons/second_page/cross-white.svg" alt="Cross"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <div class="buttons__group">
+                        <div class="buttons__items">
+                            <button class="buttons__item buttons__row1 buttons__small">Button
+                            </button>
+                            
+                            <button disabled class="buttons__item buttons__row1 buttons__small">Button
+                            </button>
+                        </div>
+    
+    
+                        <div class="buttons__items">
+                            <button class="buttons__item buttons__row2 buttons__small">Button
+                            </button>
+                            
+                            <button disabled class="buttons__item buttons__row2 buttons__small">Button
+                            </button>
+                        </div>
+    
+    
+                        <div class="buttons__items">
+                            <button class="buttons__item buttons__row3 buttons__small">Button
+                            </button>
+                            
+                            <button disabled class="buttons__item buttons__row3 buttons__small">Button
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="buttons__group">
+                        <div class="buttons__items">
+                            <button class="buttons__item buttons__row1 buttons__middle">Button
+                            </button>
+                            
+                            <button disabled class="buttons__item buttons__row1 buttons__middle">Button
+                            </button>
+                        </div>
+    
+    
+                        <div class="buttons__items">
+                            <button class="buttons__item buttons__row2 buttons__middle">Button
+                            </button>
+                            
+                            <button disabled class="buttons__item buttons__row2 buttons__middle">Button
+                            </button>
+                        </div>
+    
+    
+                        <div class="buttons__items">
+                            <button class="buttons__item buttons__row3 buttons__middle">Button
+                            </button>
+                            
+                            <button disabled class="buttons__item buttons__row3 buttons__middle">Button
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="buttons__group">
+                        <div class="buttons__items">
+                            <button class="buttons__item buttons__row1 buttons__large">Button
+                            </button>
+                            
+                            <button disabled class="buttons__item buttons__row1 buttons__large">Button
+                            </button>
+                        </div>
+    
+    
+                        <div class="buttons__items">
+                            <button class="buttons__item buttons__row2 buttons__large">Button
+                            </button>
+                            
+                            <button disabled class="buttons__item buttons__row2 buttons__large">Button
+                            </button>
+                        </div>
+    
+    
+                        <div class="buttons__items">
+                            <button class="buttons__item buttons__row3 buttons__large">Button
+                            </button>
+                            
+                            <button disabled class="buttons__item buttons__row3 buttons__large">Button
+                            </button>
+                        </div>
+                    </div>
+                    
+                        
+                </div>
+
+            </div>
+            
+            <section class="alert">
+                <div class="alert__boxes">
+                    <div class="alert__box alert__transparancy">
+                        <div>A bright alert flash for dark backgrounds, which never lose the contrast.</div>
+                        <div class="alert__close">&times;</div>
+                    </div>
+                    <div class="alert__box alert__black"><div>
+                        A dark alert flash for bright backgrounds, which never lose the contrast.
+                    </div>
+                    <div class="alert__close">&times;</div>
+                    </div>
+                    <div class="alert__box alert__blue"><div>A primary alert flash that looks pretty nice.</div>
+                        <div class="alert__close">&times;</div>
+                    </div>
+                    <div class="alert__box alert__yellow"><div>A warning alert flash that never sucks.</div>
+                        <div class="alert__close">&times;</div>
+                    </div>
+                    <div class="alert__box alert__green"><div>A success alert flash, which never lose the contrast.</div>
+                        <div class="alert__close">&times;</div>
+                    </div>
+                    <div class="alert__box alert__pink"><div>An error alert flash that nobody loves.</div>
+                        <div class="alert__close">&times;</div>
+                    </div>
+                    
+                </div>
+            </section>
+
+
+            <section class="loading">
+                <div class="loading__scale">
+                    <span class="loading__blue" style="width: 62%"></span>
+                </div>
+                <div class="loading__scale">
+                    <span class="loading__yellow" style="width: 37%"></span>
+                </div>
+                <div class="loading__scale">
+                    <span class="loading__green" style="width: 75%"></span>
+                </div>
+                <div class="loading__scale">
+                    <span class="loading__pink" style="width: 50%"></span>
+                </div>
+            </section>
+
+
+            <section class="spinner">
+                <div class="spinner__item spinner__blue"></div>
+                <div class="spinner__item spinner__yellow"></div>
+                <div class="spinner__item spinner__green"></div>
+                <div class="spinner__item spinner__pink"></div>
+            </section>
+        </section>
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./js/second-page.js"></script>
+</body>
+</html>

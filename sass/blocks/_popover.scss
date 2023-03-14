@@ -1,0 +1,67 @@
+.popover {
+    margin-bottom: 80px;
+    @include backgroundColor;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        column-gap: 20px;
+        row-gap: 30px;
+        margin-bottom: 30px;
+    }
+    &__item {
+        position: relative;
+    }
+    &__row1{
+        .popover__sign {
+            @include square(20px, top right, 45deg);
+            top: 1px;
+            left: calc(50% - 5px);
+        }
+    }
+    &__row2{
+        .popover__sign {
+            @include square(20px, top right, 45deg);
+            top: 50%;
+            right: -14px;
+        }
+    }
+    &__row3{
+        .popover__sign {
+            @include square(20px, bottom right, -45deg);
+            bottom: 0;
+            left: calc(50% - 5px);
+        }
+    }
+    &__row4{
+        .popover__sign {
+            @include square(20px, top right, 45deg);
+            top: 50%;
+            left: -5px;
+        }
+    }
+    &__box {
+        padding: 26px 16px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #fff;
+    }
+    &__header {
+        margin-bottom: 4px;
+        font-weight: 500;
+    }
+    &__white {
+        .popover__header {
+            color: $primary-color;
+        }
+        .popover__text {
+            color: #756F86;
+        }
+
+    }
+    &__text {
+        font-weight: 400;
+        opacity: .86;
+    }
+    
+
+}

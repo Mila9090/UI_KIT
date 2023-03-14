@@ -1,0 +1,34 @@
+.icons {
+    &__items {
+        width: 100%;
+        height: 198px;
+        margin-bottom: 40px;
+        padding: 30px 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        border-radius: 50px;
+        background-color: #fff;
+    }
+    &__blue {
+        @include svg-general(#0880AE);
+    }
+    &__white {
+        @include svg-general(#fff);
+    }
+    &__black {
+        @include svg-general($primary-color);
+    }
+    &__blues {
+        @include icon;
+    }
+    &__whites {
+        background-color: #7C9CBF;
+        @include icon;
+    }
+    &__blacks {
+        @include icon;
+        margin-bottom: 180px;
+    }
+    
+}

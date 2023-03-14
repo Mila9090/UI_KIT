@@ -1,0 +1,42 @@
+.buttons {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    &__small {
+        @include size(100px, 34px);
+        border-radius: 3px;
+    }
+    &__row1 {
+        @include button(0px 1px 2px, 0px 2px 4px, 0px 6px 12px, 0px 12px 24px, $opacity01, $opacity08, $opacity04, $opacity08, $opacity01, $opacity08, 1px solid #DBE2EA, 2px solid #0880AE, #fff, #7C9CBF, #EBF4F8);
+    }
+
+    &__row2 {
+        @include button(0px 1px 2px, 0px 2px 4px, 0px 6px 12px, 0px 12px 24px, $opacity08, $opacity08, $opacity08, $opacity16, $opacity01, $opacity08, none, 2px solid rgba(44, 39, 56, 0.86), #0880AE, #fff, #DBE2EA);
+    }
+
+
+    &__row3 {
+        @include button(none, none, none, none, none, 0, 0, 0, 0, 0, 2px solid #7C9CBF, 2px solid #756F86, transparent, #7C9CBF, #EBF4F8);
+        @include change;
+    }
+
+    &__middle, &__large {
+        @include size(140px, 48px);
+        @include middleAndLargeButtons;
+    }
+    &__large {
+        @include size(180px, 56px);
+    }
+
+}

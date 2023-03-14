@@ -1,0 +1,63 @@
+.tooltip {
+    margin-bottom: 80px;
+    @include backgroundColor;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 116px);
+        column-gap: 37px;
+        row-gap: 30px;
+        margin-bottom: 30px;
+    }
+    &__item {
+        position: relative;
+    }
+    &__row1{
+        .tooltip__sign {
+            @include square(10px, top right, 45deg);
+            top: 1px;
+            left: calc(50% - 2px);
+        }
+    }
+    &__row2{
+        .tooltip__sign {
+            @include square(10px, top right, 45deg);
+            top: 50%;
+            right: -6px;
+        }
+    }
+    &__row3{
+        .tooltip__sign {
+            @include square(10px, bottom right, -45deg);
+            bottom: 1px;
+            left: calc(50% - 2px);
+        }
+    }
+    &__row4{
+        .tooltip__sign {
+            @include square(10px, top right, 45deg);
+            top: 50%;
+            left: -2px;
+        }
+    }
+    &__box {
+        padding: 7px 10px;
+        border-radius: 4px;
+        color: #fff;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+    }
+    &__white {
+        .tooltip__header {
+            color: $primary-color;
+        }
+        .tooltip__text {
+            color: #756F86;
+        }
+
+    }
+    
+}

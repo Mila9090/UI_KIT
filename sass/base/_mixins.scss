@@ -1,0 +1,229 @@
+@mixin box {
+    border-radius: inherit;
+    padding: 184px 135px 40px 40px;
+}
+
+@mixin svg-general($color) {
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-color: $color;
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: repeat;
+}
+
+
+@mixin icon {
+    .icons{
+        &__1 {
+            mask-image: url('./../icons/first_page/activity.svg');
+        }
+        &__2 {
+            mask-image: url('./../icons/first_page/add.svg');
+        }
+        &__3 {
+            mask-image: url('./../icons/first_page/alert.svg');
+        }
+        &__4 {
+            mask-image: url('./../icons/first_page/arrow-bottom.svg');
+        }
+        &__5 {
+            mask-image: url('./../icons/first_page/arrow-left.svg');
+        }
+        &__6 {
+            mask-image: url('./../icons/first_page/arrow-right.svg');
+        }
+        &__7 {
+            mask-image: url('./../icons/first_page/arrow-top.svg');
+        }
+        &__8 {
+            mask-image: url('./../icons/first_page/badge.svg');
+        }
+    }
+}
+
+@mixin triangle ($translate) {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    transform: $translate;
+    position: absolute;
+    z-index: 1;
+}
+
+@mixin square($size, $origin, $deg) {
+    width: $size;
+    height: $size;
+    position: absolute;
+    transform-origin: $origin;
+    transform: rotate($deg);
+    border-radius: 2px;
+    background-color: inherit;
+}
+@mixin backgroundColor {
+    &__white {
+        background-color: #fff;
+    }
+    &__black {
+        background-color: #2C2738;
+    }
+    &__blue {
+        background-color: #0880AE;
+    }
+    &__yellow {
+        background-color: #F2AC57;
+    }
+    &__green {
+        background-color: #14A38B;
+    }
+    &__pink {
+        background-color: #FF7171;
+    }
+}
+
+@mixin iconOnBox($img){
+    background: url($img) calc(100% - 11px) center/30px no-repeat;
+    background-color: #fff;
+}
+
+@mixin font($color){
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color;
+}
+
+@mixin borderTop {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+@mixin check($img, $color) {
+    border: 2px solid $color;
+    background-image: url($img);
+}
+
+@mixin custom ($radius) {
+    margin-bottom: 0;
+    display: inline-flex;
+    align-items: center;
+    &:before{
+        content: '';
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+        border: 1px solid #DBE2EA;
+        background-color: #fff;
+        box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+        border-radius: $radius;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto;
+    }
+}
+
+@mixin btn($color, $borderColor, $shadowColor){
+    background-color: $color;
+    border: 1px solid $borderColor;
+    box-shadow: 0px 4px 8px $shadowColor;
+}
+
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button($shadowSize1, $shadowSize2, $shadowSize3, $shadowSize4, $shadowOpacity1, $shadowOpacity2, $shadowOpacity3, $shadowOpacity4, $shadowOpacity5, $shadowOpacity6, $borderSize1, $borderSize2,  $bgc, $color, $bgcDisable) {
+    box-shadow: $shadowSize1 $shadowOpacity1, $shadowSize2 $shadowOpacity2;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    background-color: $bgc;
+    color: $color;
+    border: $borderSize1;
+    &:hover{
+        border: none;
+        box-shadow: $shadowSize3 $shadowOpacity3, $shadowSize4 $shadowOpacity4;
+    }
+    &:active{
+        outline: none;
+        border: $borderSize2;
+        box-shadow: $shadowSize2 $shadowOpacity5, $shadowSize2 $shadowOpacity6;
+    }
+    &:disabled{
+        background: $bgcDisable;
+        border: $borderSize1;
+        box-shadow: $shadowSize2 $shadowOpacity2;
+        color: rgba(44, 39, 56, .24);
+    }
+}
+
+@mixin change {
+    &:hover{
+        border: 2px solid #0880AE;
+        color: #0880AE;
+    }
+    &:active {
+        color: #756F86;
+        border: 2px solid #756F86;
+    }
+    &:disabled{
+        border: 2px solid rgba(44, 39, 56, 0.24);
+        &:hover{
+            color: rgba(44, 39, 56, .24);
+        }
+    }
+}
+
+@mixin middleAndLargeButtons{
+    border-radius: 6px;
+            .buttons{
+                &__row1 {
+                    @include button(0px 2px 4px, 0px 4px 8px, 0px 12px 24px, 0px 24px 48px, $opacity01, $opacity08, $opacity04, $opacity08, $opacity01, $opacity08, 1px solid #DBE2EA, 2px solid #0880AE, #fff, #7C9CBF, #EBF4F8);
+                    &:active, &:focus{
+                        outline: none;
+                        box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.0001), 0px 2px 4px rgba(44, 39, 56, 0.08);
+                    }
+                }
+
+                &__row2 {
+                    @include button(0px 2px 4px, 0px 4px 8px, 0px 6px 12px, 0px 12px 24px, $opacity08, $opacity08, $opacity08, $opacity16, $opacity01, $opacity08, none, 2px solid rgba(44, 39, 56, 0.86), #0880AE, #fff, #DBE2EA);
+                    &:active, &:focus{
+                        outline: none;
+                        box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.0001), 0px 2px 4px rgba(44, 39, 56, 0.08);
+                    }
+                }
+
+
+                &__row3 {
+                    @include button(none, none, none, none, none, 0, 0, 0, 0, 0, 2px solid #7C9CBF, 2px solid #756F86, #EBF4F8, #7C9CBF, #EBF4F8);
+                    @include change;
+                }
+            }
+}
+
+@mixin borderColor ($color){
+    border-top-color: $color;
+        border-left-color: $color;
+        border-bottom-color: $color;
+}
+
+@mixin titleAndDescr {
+    &__title{
+        font-size: 44px;
+        line-height: 56px;
+    }
+    &__descr {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+}

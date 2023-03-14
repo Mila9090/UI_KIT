@@ -1,0 +1,106 @@
+.charts{
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-auto-rows: minmax(300px, 560px);
+        gap: 60px;
+    }
+    &__item{
+        max-width: 600px;
+        max-height: 560px;
+        background-color: #FFF;
+        box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.08), 0px 80px 160px rgba(0, 0, 0, 0.04);
+        border-radius: 24px;
+    }
+    &__chart{
+        padding: 24px 20px 40px;
+    }
+
+    &__bar{
+        width: 100%;
+        height: 56px;
+        padding: 19px 24px 16px;
+        background-color: #DAE8EE;
+        border-radius: 24px 24px 0px 0px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        color: #756F86;
+
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 44px;
+        color: $primary-color;
+    }
+    &__subtitle{
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        color: #728191;
+    }
+    &__underline{
+        width: 95%;
+        height: 1px;
+        margin: 0 auto;
+        margin-top: 34px;
+        margin-bottom: 24px;
+        background-color: #DBE2EA;
+    }
+    &__square{
+        width: 28px;
+        height: 28px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 32px rgba(0, 0, 0, 0.16);
+        border-radius: 3px;
+    }
+    &__green{
+        background-color: #14A38B;
+    }
+    &__bright{
+        background-color: #D6CF6E;
+    }
+    &__blue {
+        background-color: #0880AE;
+    }
+    &__label{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: #7C9CBF;
+    }
+    &__legend{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    &__legends{
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+    &__group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 46px;
+        .charts__legends{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+    
+
+}
+
+
+@media(max-width: 500px) {
+    .charts{
+        &__items {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-auto-rows: minmax(100px, 560px);
+        }
+    }
+}

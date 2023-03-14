@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import './libs/bootstrap-reboot.min';
+@import './base/variables.scss';
+@import './base/mixins';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $back-color;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+.container {
+    width: 95vw;
+    margin: 0 auto;
+    padding-top: 60px;
+    font-weight: 600;
+}
+.point {
+    font-weight: 600;
+    font-size: 28px;
+    color: #7C9CBF;
+    margin-bottom: 60px;
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #DBE2EA;
+        margin-top: 20px;
+    }
+    span {
+        font-size: 28px;
+        color: $primary-color;
+    }
+}
+
+
+.header{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        list-style-type: none;
+    }
+    &__link{
+        display: inline-block;
+        color: $primary-color;
+        transition: all 0.5s ease; 
+        &:hover{
+            text-decoration: none;
+            color: #0880ae;
+        }
+    }
+}
+
+@import './blocks/type-face';
+@import './blocks/colors';
+@import './blocks/icons';
+
+//second page
+@import './blocks/form';
+@import './blocks/select';
+@import './blocks/buttons';
+
+//third page
+@import './blocks/logos';
+@import './blocks/list';
+@import './blocks/avatars';
+@import './blocks/popover';
+@import './blocks/tooltip';
+@import './blocks/misc';
+@import './blocks/scale';
+
+//four page
+@import './blocks/headers';
+@import './blocks/flaps';
+@import './blocks/modals';
+@import './blocks/cards';
+@import './blocks/charts';
+@import './blocks/forms';
+
+@media (min-width: 3474px){
+    .fourth{
+        &__group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+        }
+    }
+}

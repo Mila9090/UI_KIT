@@ -1,0 +1,86 @@
+.list {
+    &__chats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    &__row1{
+        position: relative;
+        &:after {
+            @include triangle (translateY(8px));
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__row2{
+        position: relative;
+        &:after {
+            @include triangle(translateY(8px) rotate(180deg));
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &__row3{
+        position: relative;
+        &:after {
+            @include triangle(translateY(-8px));
+            left: 0;
+            top: 0;
+        }
+    }
+    &__row4{
+        position: relative;
+        &:after {
+            @include triangle(translateY(-8px) rotate(180deg));
+            right: 0;
+            top: 0;
+        }
+    }
+    &__column1{
+        &:after {
+            border-left: 9px solid #D5D6D7;
+        }
+    }
+    &__column2{
+        &:after {
+            border-left: 9px solid #585364;
+        }
+    }
+    &__column3{
+        &:after {
+            border-left: 9px solid #4874E9;
+        }
+    }
+    &__column4{
+        &:after {
+            border-left: 9px solid #DF3468;
+        }
+    }
+    &__chat {
+        position: relative;
+        z-index: 4;
+        width: 240px;
+        height: 50px;
+        padding: 16px;
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(255, 255, 255, .86);
+       
+    }
+    &__white {
+        background-color: #fff;
+        color: #756F86;
+    }
+    &__black {
+        background-color: #2C2738;
+    }
+    &__blue {
+        background-color: #6F96FF;
+    }
+    &__pink {
+        background-color: #FF5689;
+    }
+}

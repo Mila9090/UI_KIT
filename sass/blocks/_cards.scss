@@ -1,0 +1,86 @@
+.cards{
+    @include backgroundColor;
+    &__pictures {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        margin-bottom: 60px;
+    }
+    &__picture{
+        width: 300px;
+        max-width: 300px;
+        padding: 16px 16px 30px;
+        background-color: #FFF;
+        box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.02), 0px 24px 48px rgba(44, 39, 56, 0.04);
+        border-radius: 24px;
+        color: $primary-color;
+        &_two{
+            height: 430px;
+            background: url('./../img/fourth_page/card_back.png');
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: #fff;
+        }
+        &_three{
+            height: 224px;
+        }
+    }
+    &__square-img{
+        margin-bottom: 20px;
+    }
+    &__title{
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+    }
+    &__subtitle{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .buttons__item  {
+        margin-top: 27px;
+    }
+    &__colors {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: minmax(240px, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+        margin-bottom: 80px;
+    }
+    &__color{
+        padding: 16px 8px 34px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.02), 0px 24px 48px rgba(44, 39, 56, 0.04);
+        border-radius: 20px;
+        color: #fff;
+    }
+    &__icon {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__pretitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, .72);
+    }
+    &__title{
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+    }
+    &__descr{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 0;
+    }
+   
+}
